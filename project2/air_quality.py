@@ -1,5 +1,6 @@
 from geopy.geocoders import Nominatim
 import requests
+import plotext as plt
 
 # Create Token constant for waqi
 TOKEN: str
@@ -67,10 +68,26 @@ def main():
     # Print the forcasts for the next few days
     print("\nForecast:")
 
+    # Collect the points to graph
+    points = {}
+
     for forecast in result['data']['forecast']['daily'][dominant]:
 
         print("\n", forecast['day'], sep='')
         print(f"Average {format_pol(dominant)} value: {forecast['avg']}")
+
+        # Adds a point to later show in a bar chart 
+        points[forecast['avg']] = forecast['day']
+
+    # Print a new line
+    print("")
+
+    # Print a bar chart for easier visualization
+    plt.bar(points)
+    plt.plot_size(100, 30)
+    plt.xticks([i for i in range(len(points))], points.values())
+    plt.title("Forecasts")
+    plt.show()
 
     pass
 
