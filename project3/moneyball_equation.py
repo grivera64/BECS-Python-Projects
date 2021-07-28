@@ -32,7 +32,7 @@ def main():
 
             print("File format not supported! Please try again...\n(Note: Press \'q\' to quit)\n")
 
-    # TODO Read Cell Data from excel sheet ws['RC'] where R == row and C == column
+    # Read Cell Data from excel sheet ws['CR'] where C == column and R == row
 
     # Reference:
     # Columns:
@@ -68,7 +68,7 @@ def main():
             ws["G" + str(row_index)] = percentage
             ws["G" + str(row_index)].number_format = "0.00%"
 
-    # Save to a new file called similarily but append '_edited'
+    # Save to a new file called similarily but insert '_edited'
     # before the .xlsx extension
     save_path: str = file_path[0:-5:1] + '_edited.xlsx'
     print(f"\nDone!\nSaving to {save_path}...")
