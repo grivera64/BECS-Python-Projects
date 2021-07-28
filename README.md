@@ -16,7 +16,7 @@ get a head start at learning the basics through an easy-to-understand, tailored 
 ### Ubuntu/Linux:
 
 ```sh
-sudo apt-get install python3.9
+$ sudo apt-get install python3.9
 ```
 ### Windows:
 
@@ -35,7 +35,7 @@ $ git clone https://www.github.com/givera64/BECS-Python-Projects.git
 
 2. `cd` into the BECS-Python-Projects folder
 ```sh
-cd BECS-Python-Projects
+$ cd BECS-Python-Projects
 ```
 
 3. Run the project using `python`
@@ -43,13 +43,13 @@ cd BECS-Python-Projects
 Linux/MacOS
 
 ```sh
-python3.9 project1/todolist.py
+$ python3.9 project1/todolist.py
 ```
 
 Windows
 
 ```bat
-py project1\todolist.py
+> py project1\todolist.py
 ```
 
 NOTE: You will need to get an API key and store it into a file named `token.txt` to run project2.
