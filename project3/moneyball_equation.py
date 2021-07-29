@@ -8,7 +8,8 @@ def main():
 
     while True:
 
-        file_path = input("Please enter the absolute/relative path to your file: ")
+        file_path = input("Please enter the absolute/relative path to your file" + \
+                            " (enter 'q' to quit): ")
 
         if (file_path.lower() == "q"):
 
