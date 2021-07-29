@@ -14,9 +14,17 @@ def format_pol(data: str):
 def main():
 
     # Read token from token.txt (used to avoid sharing private token; could be done more securely [TODO!])
-    with open("token.txt") as fp:
+    try:
+        
+        with open("token.txt") as fp:
 
-        TOKEN = fp.read().replace("\n", "")
+            TOKEN = fp.read().replace("\n", "")
+
+    # If token is not provided
+    except IOError:
+
+        print("ERROR: cannot find token in token.txt file\nAborting program...")
+        exit(1)
 
     # Create a geopy object for finding a location's air data via zip code
     geo_locator = Nominatim(user_agent="PyAirQuality")
