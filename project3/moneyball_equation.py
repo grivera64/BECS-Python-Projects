@@ -60,13 +60,13 @@ def main():
         for row_index in range(2, 32):
 
             # Find the current team's values
-            wins = ws["E" + str(row_index)].value
-            games_played = ws["B" + str(row_index)].value
+            wins = ws[f"E{row_index}"].value
+            games_played = ws[f"B{row_index}"].value
 
             # Use the Pythagorean Expectation Formula
             percentage = (float(wins) / float(games_played))
-            ws["G" + str(row_index)] = percentage
-            ws["G" + str(row_index)].number_format = "0.00%"
+            ws[f"G{row_index}"].value = percentage
+            ws[f"G{row_index}"].number_format = "0.00%"
 
     # Save to a new file called similarily but insert '_edited'
     # before the .xlsx extension
