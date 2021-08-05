@@ -37,7 +37,7 @@ def get_elem(data: list[str]):
 
             return data[data.index(task)]
 
-        # Attempt to get a number if there is no match 
+        # Attempt to get todo item by index + 1 if there is no match 
         try:
             task_number = int(task)
 
@@ -111,11 +111,11 @@ def main():
         print("[Q]uit / [A]dd / [R]emove / [S]how / [C]lear")
         code = input()
 
-        # check if the code is a valid code
+        # Change code to length of one if not yet
         if (len(code) != 1):
 
-            print("\nInvalid Code! Please try again\n")
-            continue
+            # Use first letter
+            code = code[0]
 
         # Capitalize
         code = code.upper()
