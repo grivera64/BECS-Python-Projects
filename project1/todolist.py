@@ -59,6 +59,8 @@ def print_todo(data: list[str]):
     # Newline
     print("")
 
+    print("Here is your To-Do list:")
+
     # Ignore empty to-do lists
     if len(data) < 1:
 
@@ -144,6 +146,9 @@ def main():
 
         # Remove from to-do
         elif ("R" in code):
+
+            # Show the current To-Do List
+            print_todo(todo)
 
             # Find the element to remove via number or title
             removed = get_elem(todo)
