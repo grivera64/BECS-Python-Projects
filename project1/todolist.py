@@ -43,11 +43,12 @@ def get_elem(data: list[str]):
 
             if (task_number < 1 or task_number > len(data)):
 
-                raise ValueError()
+                print(f"\n{task_number} is not a valid number in the To-Do list. Please try again...\n")
+                continue
 
         except ValueError:
 
-            print("\nInvalid task/value. Please try again...\n")
+            print(f"\n{task} is not a valid To-Do item. Please try again...\n")
             continue
 
         # Return the element in the list
@@ -163,7 +164,7 @@ def main():
             # Remove from the list
             todo.remove(removed)
 
-            print(f"\nRemoved {removed} from the list!\n")
+            print(f"\nRemoved \"{removed}\" from the list!\n")
 
         # Show to-do
         elif ("S" in code):
