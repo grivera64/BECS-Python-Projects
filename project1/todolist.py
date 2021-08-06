@@ -29,7 +29,7 @@ def get_elem(data: list[str]):
         
         task = input()
 
-        if "cancel" in task or "Cancel" in task:
+        if task.lower() == "cancel" or task.lower() == 0:
             
             return None
 
