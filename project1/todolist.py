@@ -7,7 +7,7 @@ def new_todo(length: int):
     print("\nWhich task would you like to add? (Type \'cancel\' to cancel operation)")
     task = input(str(length + 1) + ". ")
 
-    if (task == "cancel" or task == "Cancel"):
+    if (task.lower() == "cancel"):
 
         task = None
 
