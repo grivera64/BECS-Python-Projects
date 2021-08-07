@@ -10,5 +10,4 @@ geopy
 plotext
 
 #Project 3
-et-xmlfile  # via openpyxl
 openpyxl
