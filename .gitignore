@@ -3,4 +3,5 @@ __pycache__
 token*
 *.xlsx
 *.txt
+!requirements.txt
 *.csv
