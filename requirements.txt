@@ -1,0 +1,14 @@
+#
+# Required Dependencies for grivera64/BECS-Python-Project
+# ===============================================
+# Use pip install -r requirements.txt to download
+# the following dependencies:
+#
+
+# Project 2
+geopy
+plotext
+
+#Project 3
+et-xmlfile  # via openpyxl
+openpyxl
