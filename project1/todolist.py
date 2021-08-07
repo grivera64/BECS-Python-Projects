@@ -1,7 +1,7 @@
 import shelve
 
 # Creates a new todo item
-def new_todo(length: int):
+def new_todo(length):
 
 
     print("\nWhich task would you like to add? (Type \'cancel\' to cancel operation)")
@@ -14,7 +14,7 @@ def new_todo(length: int):
     return task
 
 # Gets an element from the to-do list
-def get_elem(data: list[str]):
+def get_elem(data):
 
     # Ignore empty lists
     if len(data) < 1:
@@ -55,7 +55,7 @@ def get_elem(data: list[str]):
         return data[task_number - 1]
 
 # Print the entire to-do list
-def print_todo(data: list[str]):
+def print_todo(data):
 
     # Newline
     print("")
