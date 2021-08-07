@@ -6,7 +6,7 @@ import plotext as plt
 TOKEN: str
 
 # Format the pollutant from key to normal spelling
-def format_pol(data: str):
+def format_pol(data):
 
     return data.upper().replace('0', '.0').replace('5', '.5')
 
