@@ -1,4 +1,5 @@
 import shelve
+import readline
 
 # Creates a new todo item
 def new_todo(length):
