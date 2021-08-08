@@ -1,6 +1,7 @@
 from geopy.geocoders import Nominatim
 import requests
 import plotext as plt
+import readline
 
 # Create Token constant for waqi
 TOKEN: str
