@@ -113,8 +113,14 @@ def main():
         print("[Q]uit / [A]dd / [R]emove / [S]how / [C]lear")
         code = input()
 
+        # Ignore blank codes
+        if not code:
+        
+            print("\nNo input provided. Please try again...\n")
+            continue
+            
         # Change code to length of one if not yet
-        if (len(code) != 1):
+        elif (len(code) > 1):
 
             # Use first letter
             code = code[0]
