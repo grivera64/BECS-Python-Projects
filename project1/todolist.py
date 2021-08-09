@@ -21,7 +21,7 @@ def get_elem(data):
     if len(data) < 1:
 
         print("\nList is empty! Operation cannot be complete!")
-        return None
+        return None, None
     
     # Repeatedly ask for a valid item on the list
     while(True):
@@ -32,11 +32,13 @@ def get_elem(data):
 
         if task.lower() == "cancel" or task.lower() == 0:
             
-            return None
+            return None, None
 
         elif task in data:
 
-            return data[data.index(task)]
+            curr_index = data.index(task)
+
+            return curr_index + 1, data[curr_index]
 
         # Attempt to get todo item by index + 1 if there is no match 
         try:
@@ -53,7 +55,7 @@ def get_elem(data):
             continue
 
         # Return the element in the list
-        return data[task_number - 1]
+        return task_number, data[task_number - 1]
 
 # Print the entire to-do list
 def print_todo(data):
@@ -159,7 +161,7 @@ def main():
             print_todo(todo)
 
             # Find the element to remove via number or title
-            removed = get_elem(todo)
+            number, removed = get_elem(todo)
 
             # Cancel if no data to remove
             if not removed:
@@ -171,7 +173,7 @@ def main():
             # Remove from the list
             todo.remove(removed)
 
-            print(f"\nRemoved \"{removed}\" from the list!\n")
+            print(f"\nRemoved \"{number}. {removed}\" from the list!\n")
 
         # Show to-do
         elif ("S" in code):
